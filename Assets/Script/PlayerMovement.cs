@@ -41,5 +41,18 @@ public class PlayerMovement : MonoBehaviour
 
         // 移动玩家
         transform.Translate(movement);
+
+        if (moveX != 0)
+        {
+            Flip(moveX);
+        }
+
+        void Flip(float moveX)
+        {
+            // 根据移动方向翻转玩家，如果向左移动（moveX < 0），则翻转，否则恢复默认朝向
+            Vector3 theScale = transform.localScale;
+            theScale.x = moveX < 0 ? -Mathf.Abs(theScale.x) : Mathf.Abs(theScale.x);
+            transform.localScale = theScale;
+        }
     }
 }
