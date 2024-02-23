@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class PickupSoldier : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PickupSoldier : MonoBehaviour
     public int maxSoldiers = 3; // 最多跟随的士兵数量
     public AudioClip pickupSound; // 拾取士兵的音效
     public int score = 0; // 玩家得分
+    public Text scoreText;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -32,5 +34,13 @@ public class PickupSoldier : MonoBehaviour
             soldierCount = 0;
             // 可以在这里添加其他逻辑，比如更新UI显示分数
         }
+        if (scoreText != null)
+        {
+            scoreText.text =  score.ToString();
+        }
+    }
+    private void Update()
+    {
+        Debug.Log(soldierCount);
     }
 }

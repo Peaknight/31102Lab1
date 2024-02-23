@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tree
   - Soldier
+  - House
   layers:
   - Default
   - TransparentFX
