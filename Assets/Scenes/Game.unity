@@ -390,7 +390,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSoldiers: 3
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 241e84204733bef4caf8d56bd4f5e48f, type: 3}
+  putdownSound: {fileID: 8300000, guid: 93df26e74fc65be4689d11e26686b8a7, type: 3}
   score: 0
   scoreText: {fileID: 299760663}
   soldierNumText: {fileID: 1533967257}
